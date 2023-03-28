@@ -6,7 +6,7 @@ const deskBtnOneClick = () => {
     console.log("displayed 1");
     displayApp1[0].style.display = "block"; //changes container div to be visible/interactable
 };
-deskBtnOne[0].addEventListener("click", deskBtnOneClick); // change this to doubleclick down the line
+deskBtnOne[0].addEventListener("dblclick", deskBtnOneClick); // change this to doubleclick down the line
 appBtnOne[0].addEventListener("click", deskBtnOneClick); // change this to doubleclick down the line
 
 // Application 2
@@ -17,7 +17,7 @@ const deskBtnTwoClick = () => {
     console.log("displayed 2");
     displayApp2[0].style.display = "block"; //changes container div to be visible/interactable
 };
-deskBtnTwo[0].addEventListener("click", deskBtnTwoClick); // change this to doubleclick down the line
+deskBtnTwo[0].addEventListener("dblclick", deskBtnTwoClick); // change this to doubleclick down the line
 appBtnTwo[0].addEventListener("click", deskBtnTwoClick); // change this to doubleclick down the line
 
 // Application 3
@@ -28,7 +28,7 @@ const deskBtnThreeClick = () => {
     console.log("displayed 3");
     displayApp3[0].style.display = "block"; //changes container div to be visible/interactable
 };
-deskBtnThree[0].addEventListener("click", deskBtnThreeClick); // change this to doubleclick down the line
+deskBtnThree[0].addEventListener("dblclick", deskBtnThreeClick); // change this to doubleclick down the line
 appBtnThree[0].addEventListener("click", deskBtnThreeClick); // change this to doubleclick down the line
 
 // Application 1 Nav
@@ -64,3 +64,33 @@ const updateClock = () => {
     setTimeout(updateClock, 100);
 };
 updateClock();
+
+// Start Menu
+const startBtn = document.getElementsByClassName("start-btn");
+const startNavContent = document.getElementsByClassName("start-drop-content");
+const startBtnClick = () => {
+    console.log("Start clicked");
+    startNavContent[0].classList.toggle("show");
+};
+startBtn[0].addEventListener("click", startBtnClick);
+
+//Function where if user clicks away from start menu, menu closes
+window.onclick = function (event) {
+    if (!event.target.matches(".start-btn")) {
+        let dropdowns = document.getElementsByClassName("start-drop-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+                openDropdown.classList.remove("show");
+            }
+        }
+    }
+};
+
+const startBtn1 = document.getElementsByClassName("start-app-1");
+startBtn1[0].addEventListener("click", deskBtnOneClick);
+const startBtn2 = document.getElementsByClassName("start-app-2");
+startBtn2[0].addEventListener("click", deskBtnTwoClick);
+const startBtn3 = document.getElementsByClassName("start-app-3");
+startBtn3[0].addEventListener("click", deskBtnThreeClick);
