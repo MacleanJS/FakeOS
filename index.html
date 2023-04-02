@@ -12,16 +12,22 @@
         <div class="desktop-container">
             <div class="desktop-apps">
                 <div class="desktop-btn-container">
-                    <button class="desktop-btn-1 desktop-btn"></button>
-                    <p>App 1</p>
+                    <button class="desktop-btn-1 desktop-btn">
+                        <img src="Media/notepadLogo.png" />
+                    </button>
+                    <p>Notepad</p>
                 </div>
                 <div class="desktop-btn-container">
-                    <button class="desktop-btn-2 desktop-btn"></button>
-                    <p>App 2</p>
+                    <button class="desktop-btn-2 desktop-btn">
+                        <img src="Media/internetLogo.png" />
+                    </button>
+                    <p>Internet</p>
                 </div>
                 <div class="desktop-btn-container">
-                    <button class="desktop-btn-3 desktop-btn"></button>
-                    <p>App 3</p>
+                    <button class="desktop-btn-3 desktop-btn">
+                        <img src="Media/binLogo.png" />
+                    </button>
+                    <p>Rubbish</p>
                 </div>
             </div>
 
@@ -30,6 +36,10 @@
                 <!-- App1 -->
                 <div class="display-app1">
                     <nav class="display-app-nav">
+                        <div class="nav-icon">
+                            <img src="Media/notepadLogo.png" />
+                        </div>
+                        <p class="app-1-nav-text">Untitled - Notepad</p>
                         <button
                             class="display-app-nav-btn close-btn1 display-app-nav-btn__left-btn"
                         >
@@ -38,14 +48,24 @@
                         <button
                             class="display-app-nav-btn display-app-nav-btn__mid-btn"
                         >
-                            []
+                            ▢
                         </button>
                         <button
                             class="display-app-nav-btn close-btn1 display-app-nav-btn__right-btn"
                         >
-                            X
+                            ✖
                         </button>
                     </nav>
+                    <div class="app-1-fakeNav">
+                        <p>File</p>
+                        <p>Edit</p>
+                        <p>Format</p>
+                        <p>View</p>
+                        <p>Help</p>
+                    </div>
+                    <div class="app-1-div-text">
+                        <textarea class="app-1-text"></textarea>
+                    </div>
                 </div>
                 <!-- App1 -->
                 <!-- App2 -->
@@ -59,12 +79,12 @@
                         <button
                             class="display-app-nav-btn display-app-nav-btn__mid-btn"
                         >
-                            []
+                            ▢
                         </button>
                         <button
                             class="display-app-nav-btn close-btn2 display-app-nav-btn__right-btn"
                         >
-                            X
+                            ✖
                         </button>
                     </nav>
                 </div>
@@ -80,37 +100,55 @@
                         <button
                             class="display-app-nav-btn display-app-nav-btn__mid-btn"
                         >
-                            []
+                            ▢
                         </button>
                         <button
                             class="display-app-nav-btn close-btn3 display-app-nav-btn__right-btn"
                         >
-                            X
+                            ✖
                         </button>
                     </nav>
                 </div>
                 <!-- App3 -->
             </div>
         </div>
+        <div class="start-drop-content">
+            <button class="start-app-0 start-app-btn">
+                <p>Maclean Staden</p>
+            </button>
+            <button class="start-app-1 start-app-btn">
+                <div class="nav-icon"><img src="Media/notepadLogo.png" /></div>
+                <p>Notepad</p>
+            </button>
+            <button class="start-app-2 start-app-btn">
+                <div class="nav-icon"><img src="Media/internetLogo.png" /></div>
+                <p>Internet</p>
+            </button>
+            <button class="start-app-3 start-app-btn">
+                <div class="nav-icon"><img src="Media/binLogo.png" /></div>
+                <p>Rubbish</p>
+            </button>
+        </div>
         <nav>
             <button class="start-btn nav-btn">
-                <div class="nav-icon">a</div>
-                Start
+                <img src="/Media/startIcon.png" class="start-btn" />
+                <p class="start-btn">Start</p>
             </button>
+
             <button class="app-1-btn nav-btn">
-                <div class="nav-icon">a</div>
-                App1
+                <div class="nav-icon"><img src="Media/notepadLogo.png" /></div>
+                Notepad
             </button>
             <button class="app-2-btn nav-btn">
-                <div class="nav-icon">a</div>
-                App2
+                <div class="nav-icon"><img src="Media/internetLogo.png" /></div>
+                Internet
             </button>
             <button class="app-3-btn nav-btn">
-                <div class="nav-icon">a</div>
-                App3
+                <div class="nav-icon"><img src="Media/binLogo.png" /></div>
+                Rubbish
             </button>
             <button class="time-btn nav-btn">
-                <div class="nav-icon">a</div>
+                <div class="nav-icon"><img src="Media/clock.png" /></div>
                 <p id="dateTime"></p>
             </button>
         </nav>
